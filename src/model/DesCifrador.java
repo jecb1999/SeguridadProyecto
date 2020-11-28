@@ -20,9 +20,8 @@ public class DesCifrador {
 	}
 	
 	public void processFile(boolean encrypt, File inputFile, String inputKey, File outputFile) throws Exception {
-        byte[] output = new byte[16];
-        String salt = output.toString();
-        PBEKeySpec ks = new PBEKeySpec(inputKey.toCharArray(), salt.getBytes(), 1000, 128);
+        byte[] salt = new byte[16];
+        PBEKeySpec ks = new PBEKeySpec(inputKey.toCharArray(), salt, 1000, 128);
         SecretKeyFactory skf = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
         SecretKey secret = new SecretKeySpec(skf.generateSecret(ks).getEncoded(), "AES");
         System.out.println(secret.toString());
