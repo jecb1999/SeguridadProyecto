@@ -14,7 +14,6 @@ public class Menu extends Stage {
 	private Scene scene;
 	private Button cifrar;
 	private Button descifrar;
-	private Button comparar;
 	private Label titulo;
 	private MenuControl control;
 	
@@ -30,17 +29,13 @@ public class Menu extends Stage {
 		cifrar.setLayoutX(124);
 		cifrar.setLayoutY(63);
 		descifrar = new Button("DESCIFRAR");
-		descifrar.setLayoutX(231);
+		descifrar.setLayoutX(359);
 		descifrar.setLayoutY(63);
-		comparar = new Button("COMPARAR");
-		comparar.setLayoutX(359);
-		comparar.setLayoutY(63);
 		AnchorPane ap = new AnchorPane();
 		ap.setPrefHeight(105);
 		ap.setPrefWidth(537);
 		ap.getChildren().add(cifrar);
 		ap.getChildren().add(descifrar);
-		ap.getChildren().add(comparar);
 		ap.getChildren().add(titulo);
 		
 		scene = new Scene(ap);
@@ -62,14 +57,6 @@ public class Menu extends Stage {
 
 	public void setDescifrar(Button descifrar) {
 		this.descifrar = descifrar;
-	}
-
-	public Button getComparar() {
-		return comparar;
-	}
-
-	public void setComparar(Button comparar) {
-		this.comparar = comparar;
 	}
 
 	public MenuControl getControl() {

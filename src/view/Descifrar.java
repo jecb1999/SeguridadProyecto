@@ -19,6 +19,8 @@ public class Descifrar extends Stage{
 	private Text rutaIn;
 	private Button archivoOut;
 	private Text rutaOut;
+	private Button sha1;
+	private Text textSha1;
 	private Button descifrar;
 	private Scene scene;
 	private DescifrarControl control;
@@ -44,13 +46,19 @@ public class Descifrar extends Stage{
 		rutaOut = new Text();
 		rutaOut.setLayoutX(273);
 		rutaOut.setLayoutY(132);
+		sha1 = new Button("Archivo SHA-1");
+		sha1.setLayoutX(127);
+		sha1.setLayoutY(166);
+		textSha1 = new Text();
+		textSha1.setLayoutX(273);
+		textSha1.setLayoutY(183);
 		rutaOut.setWrappingWidth(149.0000031888485);
 		descifrar = new Button("DESCIFRAR");
 		descifrar.setLayoutX(221);
-		descifrar.setLayoutY(170);
+		descifrar.setLayoutY(234);
 		
 		AnchorPane ap = new AnchorPane();
-		ap.setPrefHeight(209);
+		ap.setPrefHeight(265);
 		ap.setPrefWidth(497);
 		ap.getChildren().add(contrasenha);
 		ap.getChildren().add(putContra);
@@ -58,6 +66,8 @@ public class Descifrar extends Stage{
 		ap.getChildren().add(rutaIn);
 		ap.getChildren().add(rutaOut);
 		ap.getChildren().add(archivoOut);
+		ap.getChildren().add(sha1);
+		ap.getChildren().add(textSha1);
 		ap.getChildren().add(descifrar);
 		
 		scene = new Scene(ap);
@@ -121,6 +131,24 @@ public class Descifrar extends Stage{
 	public void setDescifrar(Button descifrar) {
 		this.descifrar = descifrar;
 	}
+
+	public Button getSha1() {
+		return sha1;
+	}
+
+	public void setSha1(Button sha1) {
+		this.sha1 = sha1;
+	}
+
+	public Text getTextSha1() {
+		return textSha1;
+	}
+
+	public void setTextSha1(Text textSha1) {
+		this.textSha1 = textSha1;
+	}
+	
+	
 
 
 

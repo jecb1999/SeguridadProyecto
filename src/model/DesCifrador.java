@@ -24,7 +24,6 @@ public class DesCifrador {
         PBEKeySpec ks = new PBEKeySpec(inputKey.toCharArray(), salt, 1000, 128);
         SecretKeyFactory skf = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
         SecretKey secret = new SecretKeySpec(skf.generateSecret(ks).getEncoded(), "AES");
-        System.out.println(secret.toString());
         Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
         if(encrypt) {
             cipher.init(Cipher.ENCRYPT_MODE,secret);
