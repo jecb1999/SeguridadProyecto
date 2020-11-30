@@ -9,14 +9,21 @@ import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
+/**
+ * Clase que muestra la vista del menú principal de la aplicación.
+ *
+ */
 public class Menu extends Stage {
-	
+
 	private Scene scene;
 	private Button cifrar;
 	private Button descifrar;
 	private Label titulo;
 	private MenuControl control;
-	
+
+	/**
+	 * Crea una nueva instancia de Menu.
+	 */
 	public Menu() {
 		titulo = new Label("Seguridad Total");
 		titulo.setLayoutX(179);
@@ -37,36 +44,64 @@ public class Menu extends Stage {
 		ap.getChildren().add(cifrar);
 		ap.getChildren().add(descifrar);
 		ap.getChildren().add(titulo);
-		
+
 		scene = new Scene(ap);
 		this.setScene(scene);
 		control = new MenuControl(this);
 	}
 
+	/**
+	 * Retorna el botón para cifrar.
+	 * 
+	 * @return Botón para cifrar.
+	 */
 	public Button getCifrar() {
 		return cifrar;
 	}
 
+	/**
+	 * Cambia el botón para cifrar.
+	 * 
+	 * @param cifrar Nuevo botón para cifrar.
+	 */
 	public void setCifrar(Button cifrar) {
 		this.cifrar = cifrar;
 	}
 
+	/**
+	 * Retorna el botón para descifrar.
+	 * 
+	 * @return Botón para descifrar.
+	 */
 	public Button getDescifrar() {
 		return descifrar;
 	}
 
+	/**
+	 * Cambia el botón para descifrar.
+	 * 
+	 * @param descifrar Nuevo botón para descifrar.
+	 */
 	public void setDescifrar(Button descifrar) {
 		this.descifrar = descifrar;
 	}
 
+	/**
+	 * Retorna el menú de control para cambiar a las vistas de cifrar y descifrar.
+	 * 
+	 * @return Menú de control.
+	 */
 	public MenuControl getControl() {
 		return control;
 	}
 
+	/**
+	 * Camia el menú de control.
+	 * 
+	 * @param control Nuevo menú de control.
+	 */
 	public void setControl(MenuControl control) {
 		this.control = control;
 	}
-	
-	
 
 }
