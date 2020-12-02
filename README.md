@@ -24,6 +24,7 @@ El programa se compone de e vistas que son el menú principal, la vista de cifra
 
 
 ## Dificultades encontradas
+Durante el proycto podriamos decir que se nos presentaron pocas dificultades. Una de las dificultades del proyecto fue como manejar el hash del archivo cifrado, lo que hicimos fue poner el hash en un archivo y cuando lo necesitaramos para verificar la comparación entre el hash del archivo original y el archivo descifrado pasar ese archivo de texto a string, se podria decir que esa fue la mayor dificultad. Otra dificultad fue que java ofrece varios estilos de cifrados AES, pero esta dificulta se resolvia leyendo la documentación que se encontraba en internet.
 
 
 ## Conclusiones
