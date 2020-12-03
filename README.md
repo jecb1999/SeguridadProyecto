@@ -25,8 +25,12 @@ El programa se compone de e vistas que son el menú principal, la vista de cifra
 
 ## Dificultades encontradas
 Durante el proycto podriamos decir que se nos presentaron pocas dificultades. Una de las dificultades del proyecto fue como manejar el hash del archivo cifrado, lo que hicimos fue poner el hash en un archivo y cuando lo necesitaramos para verificar la comparación entre el hash del archivo original y el archivo descifrado pasar ese archivo de texto a string, se podria decir que esa fue la mayor dificultad. Otra dificultad fue que java ofrece varios estilos de cifrados AES, pero esta dificulta se resolvia leyendo la documentación que se encontraba en internet.
+De igual forma, otra dificultad que se presentó es el cifrado de archivos con un tamaño superior a los 1.5 Gb, esto debido a que la memoria heap de la JVM se queda sin espacio para almacenar el nuevo objeto que es usado para cifrar el archivo y por eso el programa arroja la excepción 
+``` shell
+java.lang.OutOfMemoryError : java heap space
+```
+En últimas el tamaño minimo permitido para cifrar los archivos depende del tamaño de lamemoria heap de la JVM donde se ejecute el programa, lo cual limita el cifrado a archivos de un tamaño pequeño.
 
 
 ## Conclusiones
-Al descifrar el archivo, tener el archivo con el hash del documento original cifrado permite comprobar la autenticidad del archivo descifrado, ya que una modificación del documento original producirá un hash diferente. 
-Gracias a esto puedo estar seguro de que el archivo descifrado es el que esperaba.
+
