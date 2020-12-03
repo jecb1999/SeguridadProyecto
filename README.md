@@ -28,3 +28,5 @@ Durante el proycto podriamos decir que se nos presentaron pocas dificultades. Un
 
 
 ## Conclusiones
+Al descifrar el archivo, tener el archivo con el hash del documento original cifrado permite comprobar la autenticidad del archivo descifrado, ya que una modificación del documento original producirá un hash diferente. 
+Gracias a esto puedo estar seguro de que el archivo descifrado es el que esperaba.
