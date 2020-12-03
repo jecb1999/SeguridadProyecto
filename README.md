@@ -33,4 +33,5 @@ En últimas el tamaño minimo permitido para cifrar los archivos depende del tam
 
 
 ## Conclusiones
+Al hacer este proyecto descubrimos que Java posee muy buenas librerias en temas de seguridad, ya que las librerias contienen muchos metodos que nos facilitaron mucho la tarea. Esto quiere decir que para futuros proyectos podemos agregar seguridad si necesidad de hacer un gran esfuerzo.
 
